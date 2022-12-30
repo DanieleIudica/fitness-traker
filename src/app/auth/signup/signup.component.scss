@@ -1,0 +1,16 @@
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+mat-form-field{
+  width: 300px;
+  margin-bottom: 16px;
+}
+
+mat-checkbox{
+  margin-bottom: 16px;
+}

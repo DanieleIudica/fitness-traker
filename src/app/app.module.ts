@@ -12,7 +12,7 @@ import { NewTrainingComponent } from "./training/new-training/new-training.compo
 import { PastTrainingsComponent } from "./training/past-trainings/past-trainings.component";
 import { CurrentTrainingComponent } from "./training/current-training/current-training.component";
 import { WelcomeComponent } from "./welcome/welcome.component";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
     declarations: [
@@ -31,6 +31,7 @@ import { FormsModule } from "@angular/forms";
         BrowserAnimationsModule,
         MyMaterialModule,
         FormsModule,
+        ReactiveFormsModule,
     ],
     providers: [],
     bootstrap: [AppComponent],

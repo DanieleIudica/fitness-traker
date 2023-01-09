@@ -1,1 +1,25 @@
-<router-outlet></router-outlet>
+<mat-sidenav-container class="sideNav">
+    <mat-sidenav #sidenav role="navigation">
+        <div class="sideNavLinks">
+            <a routerLink="/signup">Signup</a>
+            <a routerLink="/login">Login</a>
+            <a routerLink="/training">Training</a>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar>
+            <div class="toolBarMenu">
+                <button class="burgerMenu" (click)="sidenav.toggle()" mat-icon-button>
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <a routerLink="/">LOGO</a>
+            </div>
+            <div class="toolBarLinks">
+                <a routerLink="/signup">Signup</a>
+                <a routerLink="/login">Login</a>
+                <a routerLink="/training">Training</a>
+            </div>
+        </mat-toolbar>
+        <main><router-outlet></router-outlet></main>
+    </mat-sidenav-content>
+</mat-sidenav-container>

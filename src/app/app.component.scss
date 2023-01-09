@@ -1,0 +1,60 @@
+@import "../variables.scss";
+
+
+.sideNav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.toolBarMenu{
+  display: flex;
+}
+
+.mat-sidenav{
+  width: 40vw;
+}
+
+.burgerMenu{
+  display: none;
+}
+
+mat-toolbar{
+  justify-content: space-between;
+}
+
+mat-icon{
+  color: $base-color;
+}
+
+a{
+  text-decoration: none;
+  color: $base-color;
+  margin: 0px 10px;
+}
+
+a:hover{
+  opacity: 0.7;
+}
+
+.sideNavLinks{
+  display: flex;
+  flex-direction: column;
+  a{
+    text-align: center;
+    margin-top: 32px;
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .toolBarLinks{
+    display: none;
+  }
+  .burgerMenu{
+    display: block;
+  }
+
+}

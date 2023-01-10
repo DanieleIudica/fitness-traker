@@ -13,6 +13,8 @@ import { PastTrainingsComponent } from "./training/past-trainings/past-trainings
 import { CurrentTrainingComponent } from "./training/current-training/current-training.component";
 import { WelcomeComponent } from "./welcome/welcome.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
+import { HeaderComponent } from './navigation/header/header.component';
 
 @NgModule({
     declarations: [
@@ -24,6 +26,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
         PastTrainingsComponent,
         CurrentTrainingComponent,
         WelcomeComponent,
+        SidenavListComponent,
+        HeaderComponent,
     ],
     imports: [
         BrowserModule,

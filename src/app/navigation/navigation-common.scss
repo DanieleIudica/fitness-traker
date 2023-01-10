@@ -1,0 +1,59 @@
+@import "../../variables.scss";
+
+.burgerMenu{
+  display: none;
+}
+
+mat-icon{
+  color: $base-color;
+}
+
+a{
+  text-decoration: none;
+  color: $base-color;
+  margin: 0px 10px;
+}
+
+.logoutBtn{
+  position: absolute;
+  bottom: 16px;
+  color: $base-color;
+  font-size: 1.6rem;
+  margin-left: 10px;
+}
+
+a:hover{
+  opacity: 0.7;
+}
+
+.logo{
+  margin-top: 8px;
+}
+
+.sideNavLinks{
+  display: flex;
+  flex-direction: column;
+  a{
+    padding-top: 32px;
+    font-size: 1.6rem;
+  }
+  mat-icon{padding-right: 10px; font-size: 1.3rem;}
+}
+
+mat-toolbar{
+  justify-content: space-between;
+}
+
+.toolBarMenu{
+  display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  .toolBarLinks{
+    display: none;
+  }
+  .burgerMenu{
+    display: block;
+  }
+
+}

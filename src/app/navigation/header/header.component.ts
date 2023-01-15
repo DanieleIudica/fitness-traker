@@ -1,4 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import { Subscription } from "rxjs";
+import { AuthService } from "src/app/auth/auth.service";
 
 @Component({
     selector: "app-header",
@@ -11,10 +13,10 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core";
                 <a routerLink="/" class="logo"><mat-icon>home</mat-icon></a>
             </div>
             <div class="toolBarLinks">
-                <a routerLink="/signup">Signup</a>
-                <a routerLink="/login">Login</a>
-                <a routerLink="/training">Training</a>
-                <a routerLink="/">Logout</a>
+                <a routerLink="/signup" *ngIf="!isAuth">Signup</a>
+                <a routerLink="/login" *ngIf="!isAuth">Login</a>
+                <a routerLink="/training" *ngIf="isAuth">Training</a>
+                <a routerLink="/" *ngIf="isAuth">Logout</a>
             </div>
         </mat-toolbar>
     `,
@@ -22,12 +24,21 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 })
 export class HeaderComponent implements OnInit {
     @Output() sidenavToggle = new EventEmitter<void>();
+    isAuth = false;
+    authSubscription: Subscription | undefined;
+    constructor(private authSrv: AuthService) {}
 
-    constructor() {}
-
-    ngOnInit(): void {}
+    ngOnInit(): void {
+        this.authSrv.authChange.subscribe((authStatus) => {
+            this.isAuth = authStatus;
+        });
+    }
 
     onToggleSidenav() {
         this.sidenavToggle.emit();
+    }
+
+    ngOnDestroy() {
+        this.authSubscription?.unsubscribe();
     }
 }

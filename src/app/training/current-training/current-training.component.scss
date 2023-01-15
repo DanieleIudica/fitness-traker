@@ -1,0 +1,13 @@
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  h2{
+    margin-top: 15px;
+  }
+  mat-progress-spinner{
+    transform: scale(2);
+    margin: 100px 0px;
+  }
+}

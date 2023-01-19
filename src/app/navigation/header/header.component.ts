@@ -16,7 +16,7 @@ import { AuthService } from "src/app/auth/auth.service";
                 <a routerLink="/signup" *ngIf="!isAuth">Signup</a>
                 <a routerLink="/login" *ngIf="!isAuth">Login</a>
                 <a routerLink="/training" *ngIf="isAuth">Training</a>
-                <a routerLink="/" *ngIf="isAuth">Logout</a>
+                <a *ngIf="isAuth" (click)="onLogout()">Logout</a>
             </div>
         </mat-toolbar>
     `,
@@ -36,6 +36,10 @@ export class HeaderComponent implements OnInit {
 
     onToggleSidenav() {
         this.sidenavToggle.emit();
+    }
+
+    onLogout() {
+        this.authSrv.logout();
     }
 
     ngOnDestroy() {

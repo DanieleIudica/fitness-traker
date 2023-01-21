@@ -1,13 +1,24 @@
+@import "../../../variables.scss";
+
 section{
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 30px;
-  h2{
-    margin-top: 15px;
+  h1{
+    color:$purple-color;
+    font-weight: bold;
+    text-transform: uppercase;
   }
+
   mat-progress-spinner{
     transform: scale(2);
     margin: 100px 0px;
+  }
+  p{
+    padding: 0px 70px;
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+    text-align: center;
   }
 }

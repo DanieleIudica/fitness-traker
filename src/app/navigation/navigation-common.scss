@@ -5,12 +5,12 @@
 }
 
 mat-icon{
-  color: $base-color;
+  color: $green-color;
 }
 
 a{
   text-decoration: none;
-  color: $base-color;
+  color: $green-color;
   margin: 0px 10px;
   cursor: pointer;
 }
@@ -18,7 +18,7 @@ a{
 .logoutBtn{
   position: absolute;
   bottom: 16px;
-  color: $base-color;
+  color: $green-color;
   font-size: 1.6rem;
   margin-left: 10px;
 }

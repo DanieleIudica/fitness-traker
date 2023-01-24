@@ -29,7 +29,7 @@ export class TrainingService {
     }
 
     completeExercise() {
-        this.exercices.push({ ...this.runningExercise!, date: new Date(), state: "completed" });
+        this.exercices.push({ ...this.runningExercise!, date: new Date(), state: "done" });
         this.runningExercise = undefined;
         this.exerciseChanged.next(undefined);
     }
@@ -40,7 +40,7 @@ export class TrainingService {
             duration: this.runningExercise!.duration * (progress / 100),
             calories: this.runningExercise!.calories * (progress / 100),
             date: new Date(),
-            state: "cancelled",
+            state: "close",
         });
         this.runningExercise = undefined;
         this.exerciseChanged.next(undefined);
@@ -48,6 +48,10 @@ export class TrainingService {
 
     getRunningExercise() {
         return { ...this.runningExercise };
+    }
+
+    getCompleteOrCanecelledExercises() {
+        return this.exercices.slice();
     }
 }
 

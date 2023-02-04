@@ -13,7 +13,7 @@ export class SignupComponent implements OnInit {
 
     ngOnInit(): void {
         this.maxDate.setFullYear(this.maxDate.getFullYear() - 18);
-        console.log("maxDate", this.maxDate);
+        // console.log("maxDate", this.maxDate);
     }
 
     onSubmit(form: NgForm) {

@@ -20,6 +20,7 @@ export class TrainingService {
     private exercices: Exercise[] = [];
 
     getAvailableExercises() {
+        // slice method create a copy of the array
         return this.availableExercise.slice();
     }
 

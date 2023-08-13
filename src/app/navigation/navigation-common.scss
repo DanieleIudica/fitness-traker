@@ -1,21 +1,21 @@
 @import "../../variables.scss";
 
-.burgerMenu{
+.burgerMenu {
   display: none;
 }
 
-mat-icon{
+mat-icon {
   color: $green-color;
 }
 
-a{
+a {
   text-decoration: none;
   color: $green-color;
   margin: 0px 10px;
   cursor: pointer;
 }
 
-.logoutBtn{
+.logoutBtn {
   position: absolute;
   bottom: 16px;
   color: $green-color;
@@ -23,39 +23,44 @@ a{
   margin-left: 10px;
 }
 
-a:hover{
+a:hover {
   opacity: 0.7;
 }
 
-.logo{
-  margin-top: 8px;
-}
-
-.sideNavLinks{
+.sideNavLinks {
   display: flex;
   flex-direction: column;
-  a{
+  a {
     padding-top: 32px;
     font-size: 1.6rem;
     cursor: pointer;
+    display: flex;
   }
-  mat-icon{padding-right: 10px; font-size: 1.3rem;}
+  mat-icon {
+    padding-right: 10px;
+    font-size: 1.3rem;
+  }
 }
 
-mat-toolbar{
+mat-toolbar {
   justify-content: space-between;
-}
-
-.toolBarMenu{
-  display: flex;
+  .toolBarMenu {
+    display: flex;
+  }
+  .logo {
+    margin-top: 10px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-  .toolBarLinks{
+  .toolBarLinks {
     display: none;
   }
-  .burgerMenu{
+  .burgerMenu {
     display: block;
   }
-
+  .logo {
+    position: absolute;
+    right: 10px;
+  }
 }
